@@ -14,8 +14,6 @@ public class ContadorPalabras {
         // TreeMap mantiene las claves ordenadas alfabéticamente.
         TreeMap<String, Integer> contadorpalabras = new TreeMap<>();
 
-        // El bloque try contiene las operaciones que podrían proddddddddddddddddddddddcir
-        // errores de entrada/salida, como no encontrar un fichero.
         try {
 
             // Abrimos "palabras.txt" para leerlo.

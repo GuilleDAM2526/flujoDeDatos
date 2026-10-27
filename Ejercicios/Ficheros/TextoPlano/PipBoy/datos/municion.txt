@@ -1,0 +1,2 @@
+4|Munición de 10 mm|9|24
+5|Munición .308|35|12

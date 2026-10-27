@@ -1,0 +1,4 @@
+La impresora necesita papel.
+URGENTE: el servidor no responde.
+Revisar el cable del monitor.
+Caso urgente: no se puede iniciar sesión.

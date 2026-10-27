@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <producto id="P01">
+        <nombre>Estimulante</nombre>
+        <categoria>Medicina</categoria>
+        <stock>12</stock>
+    </producto>
+    <producto id="P02">
+        <nombre>Agua purificada</nombre>
+        <categoria>Supervivencia</categoria>
+        <stock>4</stock>
+    </producto>
+    <producto id="P03">
+        <nombre>RadAway</nombre>
+        <categoria>Medicina</categoria>
+        <stock>7</stock>
+    </producto>
+</catalogo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <libro>
+        <titulo>La comunidad del anillo</titulo>
+        <autor>J. R. R. Tolkien</autor>
+    </libro>
+    <libro>
+        <titulo>El principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+    </libro>
+    <libro>
+        <titulo>Libro sin autor conocido</titulo>
+    </libro>
+</biblioteca>

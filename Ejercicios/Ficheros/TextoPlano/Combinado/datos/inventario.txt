@@ -1,0 +1,4 @@
+P01|Estimulante|3|5
+P02|Agua purificada|12|8
+P03|RadAway|1|4
+P04|Pieza desconocida|dato|2

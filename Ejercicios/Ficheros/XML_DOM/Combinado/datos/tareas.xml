@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tareas>
+    <tarea id="T01">
+        <descripcion>Repasar lectura de ficheros</descripcion>
+        <estado>pendiente</estado>
+    </tarea>
+    <tarea id="T02">
+        <descripcion>Practicar recorrido del DOM</descripcion>
+        <estado>completada</estado>
+    </tarea>
+    <tarea id="T03">
+        <descripcion>Escribir un XML con Transformer</descripcion>
+        <estado>pendiente</estado>
+    </tarea>
+    <tarea id="T04">
+        <descripcion>Entregar ejercicios</descripcion>
+        <estado>completada</estado>
+    </tarea>
+</tareas>

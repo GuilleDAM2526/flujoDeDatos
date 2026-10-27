@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno id="1">
+        <nombre>Ana</nombre>
+        <ciclo>DAM</ciclo>
+        <curso>1</curso>
+    </alumno>
+    <alumno id="2">
+        <nombre>Marcos</nombre>
+        <ciclo>DAW</ciclo>
+        <curso>2</curso>
+    </alumno>
+</alumnos>

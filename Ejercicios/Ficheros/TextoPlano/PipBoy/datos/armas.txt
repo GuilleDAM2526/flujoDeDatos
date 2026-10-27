@@ -1,0 +1,2 @@
+0|Pistola de 10 mm|18|4
+1|Rifle de caza|30|5

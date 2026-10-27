@@ -1,0 +1,6 @@
+Ana;8.5
+Luis;4
+Marta;7
+Carlos;nota pendiente
+Irene;9.25
+Dato mal formado
