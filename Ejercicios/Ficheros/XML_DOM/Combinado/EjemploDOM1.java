@@ -1,3 +1,7 @@
+/*
+ * Lee los libros de un XML con DOM y escribe sus títulos y autores
+ * en un archivo de texto.
+ */
 package Ejercicios.Ficheros.XML_DOM.Combinado;
 
 import java.io.BufferedWriter;
@@ -15,12 +19,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Ejemplo de recorrido de nodos XML y escritura de los datos seleccionados.
+ */
 public class EjemploDOM1 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "datos", "libros.xml");
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "resultados", "catalogoLibros.txt");
 
+    /**
+     * Carga el XML, recorre los libros y guarda sus datos principales en TXT.
+     */
     public static void main(String[] args) {
         try {
             Document documento = DocumentBuilderFactory.newInstance()
@@ -42,6 +52,9 @@ public class EjemploDOM1 {
         }
     }
 
+    /**
+     * Obtiene el texto de una etiqueta hija o devuelve un aviso si no existe.
+     */
     private static String textoDe(Element padre, String etiqueta) {
         NodeList elementos = padre.getElementsByTagName(etiqueta);
         if (elementos.getLength() == 0) {

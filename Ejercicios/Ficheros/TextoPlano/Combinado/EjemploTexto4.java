@@ -1,3 +1,7 @@
+/*
+ * Lee el inventario desde un TXT y calcula qué cantidad hay que reponer
+ * para alcanzar el mínimo recomendado de cada producto.
+ */
 package Ejercicios.Ficheros.TextoPlano.Combinado;
 
 import java.io.BufferedReader;
@@ -8,12 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Ejemplo de separación de campos, conversión a enteros y creación de un informe.
+ */
 public class EjemploTexto4 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "datos", "inventario.txt");
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "resultados", "reponerInventario.txt");
 
+    /**
+     * Procesa los registros del inventario y escribe los productos por reponer.
+     */
     public static void main(String[] args) {
         int productosLeidos = 0;
         int productosParaReponer = 0;

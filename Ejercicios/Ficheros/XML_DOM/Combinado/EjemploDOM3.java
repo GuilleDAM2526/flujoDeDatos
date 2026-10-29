@@ -1,3 +1,7 @@
+/*
+ * Busca un producto por su atributo ID, actualiza su stock en el DOM
+ * y guarda el documento modificado en un nuevo XML.
+ */
 package Ejercicios.Ficheros.XML_DOM.Combinado;
 
 import java.io.IOException;
@@ -18,6 +22,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Ejemplo de búsqueda de un elemento por atributo y edición de su contenido.
+ */
 public class EjemploDOM3 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "datos", "productos.xml");
@@ -26,6 +33,9 @@ public class EjemploDOM3 {
     private static final String ID_BUSCADO = "P02";
     private static final int NUEVO_STOCK = 25;
 
+    /**
+     * Localiza el producto, cambia el stock y guarda el árbol DOM actualizado.
+     */
     public static void main(String[] args) {
         try {
             Document documento = DocumentBuilderFactory.newInstance()
@@ -61,6 +71,10 @@ public class EjemploDOM3 {
         }
     }
 
+    /**
+     * Busca una etiqueta que sea hija directa del elemento indicado.
+     * No devuelve una etiqueta anidada dentro de otro elemento.
+     */
     private static Element primerHijo(Element padre, String etiqueta) {
         NodeList elementos = padre.getElementsByTagName(etiqueta);
         for (int i = 0; i < elementos.getLength(); i++) {
@@ -71,6 +85,9 @@ public class EjemploDOM3 {
         return null;
     }
 
+    /**
+     * Convierte el documento DOM actualizado en un archivo XML.
+     */
     private static void guardar(Document documento, Path ruta) throws TransformerException {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");

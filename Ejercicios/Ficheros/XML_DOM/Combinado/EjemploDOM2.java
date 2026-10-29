@@ -1,3 +1,7 @@
+/*
+ * Lee un XML de productos, copia a un documento nuevo los de categoría
+ * "Medicina" y guarda ese documento filtrado en otro archivo XML.
+ */
 package Ejercicios.Ficheros.XML_DOM.Combinado;
 
 import java.io.IOException;
@@ -19,6 +23,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Ejemplo de filtrado de nodos y copia entre documentos DOM.
+ */
 public class EjemploDOM2 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "datos", "productos.xml");
@@ -26,6 +33,9 @@ public class EjemploDOM2 {
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "resultados", "medicinas.xml");
     private static final String CATEGORIA_BUSCADA = "Medicina";
 
+    /**
+     * Selecciona los productos de la categoría indicada y guarda el nuevo XML.
+     */
     public static void main(String[] args) {
         try {
             Document original = DocumentBuilderFactory.newInstance()
@@ -58,11 +68,17 @@ public class EjemploDOM2 {
         }
     }
 
+    /**
+     * Lee el contenido de una etiqueta del producto o devuelve texto vacío.
+     */
     private static String textoDe(Element padre, String etiqueta) {
         NodeList elementos = padre.getElementsByTagName(etiqueta);
         return elementos.getLength() == 0 ? "" : elementos.item(0).getTextContent().trim();
     }
 
+    /**
+     * Transforma el árbol DOM en un archivo XML con sangrado legible.
+     */
     private static void guardar(Document documento, Path ruta) throws TransformerException {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");

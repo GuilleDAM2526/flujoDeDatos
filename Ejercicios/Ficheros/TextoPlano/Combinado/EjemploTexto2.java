@@ -1,3 +1,7 @@
+/*
+ * Lee alumnos y notas separados por punto y coma, calcula aprobados,
+ * suspensos y nota media, e informa de las líneas con datos incorrectos.
+ */
 package Ejercicios.Ficheros.TextoPlano.Combinado;
 
 import java.io.BufferedReader;
@@ -8,12 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Ejemplo de lectura de registros, cálculo de estadísticas y escritura de resultados.
+ */
 public class EjemploTexto2 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "datos", "notas.txt");
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "resultados", "resultadoNotas.txt");
 
+    /**
+     * Lee las notas, valida el rango de cada una y genera el informe final.
+     */
     public static void main(String[] args) {
         double sumaNotas = 0;
         int numeroNotas = 0;

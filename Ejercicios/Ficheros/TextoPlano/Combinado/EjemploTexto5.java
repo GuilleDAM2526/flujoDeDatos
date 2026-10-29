@@ -1,3 +1,7 @@
+/*
+ * Lee números de dos archivos TXT, ignora los valores incorrectos,
+ * combina las listas y guarda todos los números en orden ascendente.
+ */
 package Ejercicios.Ficheros.TextoPlano.Combinado;
 
 import java.io.BufferedReader;
@@ -11,6 +15,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Ejemplo de reutilización de un método de lectura y ordenación de datos.
+ */
 public class EjemploTexto5 {
     private static final Path ENTRADA_A = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "datos", "numerosA.txt");
@@ -19,6 +26,9 @@ public class EjemploTexto5 {
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "resultados", "numerosOrdenados.txt");
 
+    /**
+     * Combina los números leídos, los ordena y escribe el resultado.
+     */
     public static void main(String[] args) {
         try {
             List<Integer> numeros = new ArrayList<>();
@@ -41,6 +51,9 @@ public class EjemploTexto5 {
         }
     }
 
+    /**
+     * Lee un archivo y devuelve sus líneas que contienen números enteros válidos.
+     */
     private static List<Integer> leerNumeros(Path archivo) throws IOException {
         List<Integer> numeros = new ArrayList<>();
 

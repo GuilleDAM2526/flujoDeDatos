@@ -1,3 +1,7 @@
+/*
+ * Lee un XML de alumnos, calcula un ID nuevo, añade un alumno al DOM
+ * y guarda el resultado sin modificar el archivo de entrada.
+ */
 package Ejercicios.Ficheros.XML_DOM.Combinado;
 
 import java.io.IOException;
@@ -18,12 +22,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+/**
+ * Ejemplo de inserción de un nuevo elemento en un documento XML.
+ */
 public class EjemploDOM4 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "datos", "alumnos.xml");
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "XML_DOM", "Combinado", "resultados", "alumnosActualizados.xml");
 
+    /**
+     * Crea el nodo alumno con sus datos y lo añade a la raíz del documento.
+     */
     public static void main(String[] args) {
         try {
             Document documento = DocumentBuilderFactory.newInstance()
@@ -46,6 +56,9 @@ public class EjemploDOM4 {
         }
     }
 
+    /**
+     * Recorre los alumnos y devuelve el número siguiente al ID más alto.
+     */
     private static int siguienteId(Element raiz) {
         NodeList alumnos = raiz.getElementsByTagName("alumno");
         int mayorId = 0;
@@ -63,12 +76,18 @@ public class EjemploDOM4 {
         return mayorId + 1;
     }
 
+    /**
+     * Crea una etiqueta de texto y la añade como hija del elemento indicado.
+     */
     private static void agregarTexto(Document documento, Element padre, String etiqueta, String valor) {
         Element elemento = documento.createElement(etiqueta);
         elemento.setTextContent(valor);
         padre.appendChild(elemento);
     }
 
+    /**
+     * Guarda el árbol DOM en formato XML con sangrado para facilitar su lectura.
+     */
     private static void guardar(Document documento, Path ruta) throws TransformerException {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");

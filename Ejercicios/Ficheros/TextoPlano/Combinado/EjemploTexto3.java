@@ -1,3 +1,7 @@
+/*
+ * Filtra un archivo de incidencias y copia a otro TXT solo las líneas
+ * que contienen la palabra "urgente", sin distinguir mayúsculas.
+ */
 package Ejercicios.Ficheros.TextoPlano.Combinado;
 
 import java.io.BufferedReader;
@@ -9,6 +13,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Locale;
 
+/**
+ * Ejemplo de búsqueda de texto y escritura selectiva de líneas.
+ */
 public class EjemploTexto3 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "datos", "incidencias.txt");
@@ -16,6 +23,9 @@ public class EjemploTexto3 {
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "resultados", "incidenciasUrgentes.txt");
     private static final String PALABRA_BUSCADA = "urgente";
 
+    /**
+     * Lee cada incidencia y escribe en la salida las coincidencias encontradas.
+     */
     public static void main(String[] args) {
         int coincidencias = 0;
 

@@ -1,3 +1,7 @@
+/*
+ * Lee temperaturas desde un TXT, calcula la media de los valores válidos,
+ * cuenta las líneas incorrectas y guarda un resumen en otro TXT.
+ */
 package Ejercicios.Ficheros.TextoPlano.Combinado;
 
 import java.io.BufferedReader;
@@ -8,12 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Ejemplo de lectura línea por línea, validación de números y escritura de un informe.
+ */
 public class EjemploTexto1 {
     private static final Path ENTRADA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "datos", "temperaturas.txt");
     private static final Path SALIDA = Paths.get(
             "Ejercicios", "Ficheros", "TextoPlano", "Combinado", "resultados", "resumenTemperaturas.txt");
 
+    /**
+     * Procesa las temperaturas de entrada y escribe el resumen de resultados.
+     */
     public static void main(String[] args) {
         int cantidad = 0;
         int lineasIncorrectas = 0;
